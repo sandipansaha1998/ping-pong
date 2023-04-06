@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+html {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+  background: rgb(141, 166, 227);
+  font-family: "Righteous", cursive;
+}
+.header {
+  text-align: center;
+  flex: 50%;
+  max-height: 10%;
+  display: flex;
+  justify-content: center;
+  font-size: large;
+}
+.header h3 {
+  margin-left: auto;
+}
+
+.max-score {
+  align-self: center;
+  margin-left: auto;
+  margin-right: 2rem;
+  font-size: 2rem;
+}
+
+.panel {
+  display: flex;
+  justify-content: center;
+  flex: 70%;
+  position: relative;
+  gap: 5vw;
+}
+
+.difficulty {
+  display: flex;
+  flex-direction: column;
+  min-width: 20%;
+}
+/* Hiding the radio buttons */
+input[type="radio"] {
+  display: none;
+  cursor: pointer;
+}
+input[type="radio"] + h3 {
+  cursor: pointer;
+  text-align: center;
+  padding: 5%;
+  box-shadow: 5px 5px 5px black;
+}
+
+input[type="radio"]:checked + h3 {
+  color: white;
+  background-color: rgb(68, 57, 161);
+}
+canvas {
+  background-image: linear-gradient(to right, #8e2de2, #4a00e0);
+  align-self: flex-start;
+  border: 2px solid black;
+}
+.side {
+  display: flex;
+  min-width: 10%;
+  justify-content: center;
+  padding: 2%;
+}
+
+/* Counter */
+
+.counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vw;
+}
+/* Animating the Game Over */
+@keyframes zoomIn {
+  0% {
+    font-size: 1rem;
+  }
+  50% {
+    font-size: 1.5rem;
+  }
+  100% {
+    font-size: 1rem;
+  }
+}
+.game-over {
+  display: none;
+  color: rgb(239, 5, 5);
+  animation-name: zoomIn;
+  animation: zoomIn 3s steps(100, start) infinite;
+}
+
+.curr_score {
+  color: black;
+}
+
+.counter h5 {
+  text-align: center;
+  text-decoration: underline;
+}
+
+.box {
+  height: 6vw;
+  width: 6vw;
+  background-color: cyan;
+  /* display: flex; */
+  flex-direction: column;
+  /* margin-top: 2.5vw; */
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 25%;
+}
+
+.small-box {
+  height: 6vw;
+  width: 6vw;
+  margin: 0%;
+  font-size: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 25%;
+  background-image: linear-gradient(180deg, #a9c9ff 0%, #ffbbec 100%);
+}
+
+.curr {
+  background-color: white;
+}
+.next {
+  background-color: rgb(255, 255, 255);
+}
+.animate {
+  transform: translateY(-6vw);
+  transition: all 0.5s ease-in-out;
+}
+
+.glow-on-hover {
+  width: 15vw;
+  height: 3.5vw;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  border-radius: 15px;
+  align-self: center;
+}
+.glow-on-hover:hover {
+  transition: all 0.3s ease-in-out;
+
+  background-color: #b3c7e9;
+  color: black;
+}

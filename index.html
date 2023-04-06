@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ping-pong</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+
+    <!-- Header -->
+    <div class="header test">
+        <h3>Ping-pong</h3>
+        <!-- MAX SCORE -->
+        <div class="max-score">
+            Max:0
+        </div>
+    </div>
+
+    <div class="panel test">
+        <div class="difficulty test">
+            <!-- Level -->
+            <label class="container">
+                <input type="radio" id="amateur" checked="checked" name="radio">
+                <h3>Amateur</h3>
+            </label>
+            <label class="container">
+                <input type="radio" id="pro" name="radio">
+                <h3>Pro</h3>
+            </label>
+            <label class="container">
+                <input type="radio" id="world" name="radio">
+                <h3>World class</h3>
+            </label>
+
+        </div>
+        <!-- Canvas -->
+        <canvas id="canvas"></canvas>
+        <div class="side test ">
+            <!-- Score -->
+            <div class="counter test">
+                <h5>Score</h5>
+                <div class="box ">
+                    <div class="curr small-box">0</div>
+                    <div class="next small-box">1</div>
+                </div>
+                <!-- Button -->
+                <button class="glow-on-hover play test" type="button">Play</button>
+                <div class="game-over">
+                    Game Over
+                    <div class="curr_score"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
